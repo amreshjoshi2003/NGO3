@@ -1,0 +1,122 @@
+/* Container for the entire slider */
+.slider-container {
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Swiper base */
+.mySwiper {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* SwiperSlide image styling */
+.mySwiper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 1s ease, filter 0.5s ease;
+  filter: grayscale(30%) brightness(0.8) contrast(1.1);
+}
+
+/* Hover zoom effect */
+.mySwiper img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1) saturate(1.2);
+}
+
+/* Overlay animation */
+.mySwiper .slide-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(100%);
+}
+
+.mySwiper:hover .slide-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay text */
+.slide-overlay h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.slide-overlay p {
+  font-size: 1.2rem;
+  max-width: 70%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.15);
+  color: #00fff7;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .slider-container {
+    padding: 0 20px;
+  }
+
+  .slide-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .slide-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mySwiper img {
+    height: 80vh;
+  }
+
+  .slide-overlay {
+    padding: 20px;
+  }
+
+  .slide-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide-overlay p {
+    font-size: 0.9rem;
+  }
+}

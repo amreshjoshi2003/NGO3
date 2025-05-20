@@ -1,0 +1,194 @@
+.main_navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #eb5114); /* 🇮🇳 Bhakti to Peace */
+  padding: 10px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-top: 10px; /* Increased space */
+}
+
+
+  .navbar_relative {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #menu_toggle_btn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+
+  .website_logo img {
+    height: 60px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .website_logo img:hover {
+    transform: scale(1.05);
+  }
+
+  .website_title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 15px;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .website_social_icon {
+    display: flex;
+    gap: 10px;
+  }
+
+  .website_social_icon a {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .website_social_icon a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .website_social_icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .donate-btn button {
+    padding: 10px 20px;
+    background: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .donate-btn button:hover {
+    background: #ff6f61;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    #menu_toggle_btn {
+      display: block;
+    }
+
+    .navbar_relative {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .website_title {
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .website_social_icon {
+      justify-content: flex-start;
+    }
+
+    .donate-btn {
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .website_title {
+      font-size: 16px;
+    }
+
+    .donate-btn button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+/* Enquiry Form Styles */
+.enquiry_form {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry_form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.enquiry_form .form-group {
+  margin-bottom: 15px;
+}
+
+.enquiry_form label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.enquiry_form input,
+.enquiry_form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.enquiry_form button {
+  background-color: #eb5114;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.enquiry_form button:hover {
+  background-color: #d44f12;
+}
+
+/* Responsive Form */
+@media (max-width: 768px) {
+  .enquiry_form {
+    margin: 20px;
+  }
+
+  .enquiry_form button {
+    width: auto;
+    margin-top: 15px;
+  }
+}
+.success_message {
+  background-color: #28a745;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

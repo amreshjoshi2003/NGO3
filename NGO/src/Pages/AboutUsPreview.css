@@ -1,0 +1,157 @@
+/* Global container */
+.about-preview-container {
+  padding: 60px 40px;
+  background: linear-gradient(to right, #f9f9f9, #eef2f3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Main Card */
+.about-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Section */
+.about-image {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Section */
+.about-text {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-text h1 {
+  font-size: 32px;
+  color: #34495e;
+  margin-bottom: 15px;
+  border-left: 6px solid #3498db;
+  padding-left: 14px;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+/* Animation */
+.fade-line {
+  animation: fadeInLine 0.6s ease-in;
+}
+
+@keyframes fadeInLine {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Join Us */
+.about-text h3 {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #27ae60;
+}
+
+/* Button */
+.read-more-button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #2980b9;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: flex-start;
+}
+
+.read-more-button:hover {
+  background: #1abc9c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(26, 188, 156, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .about-text h1 {
+    font-size: 28px;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-preview-container {
+    padding: 30px 20px;
+  }
+
+  .about-text h1 {
+    font-size: 24px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .read-more-button {
+    width: 100%;
+    text-align: center;
+  }
+}

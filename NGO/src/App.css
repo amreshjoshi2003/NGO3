@@ -1,0 +1,156 @@
+/* === Reset & Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Header & Titles === */
+h1, h2, h3, h4 {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* === Button === */
+.button {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
+
+/* === Slider Styles === */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider-slide {
+  min-width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.slider-slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.slider-slide h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.slider-slide p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* === Arrows === */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: rgba(31, 41, 55, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(31, 41, 55, 0.9);
+}
+
+.slider-arrow.left {
+  left: 15px;
+}
+
+.slider-arrow.right {
+  right: 15px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .slider-slide {
+    padding: 20px;
+  }
+
+  .slider-slide h3 {
+    font-size: 1.2rem;
+  }
+
+  .slider-arrow {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .slider-slide p {
+    font-size: 0.9rem;
+  }
+}
