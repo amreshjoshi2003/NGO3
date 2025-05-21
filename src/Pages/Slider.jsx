@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // Custom CSS
-import './slider.css';
+import './Slider.css';
 
 const Slider = () => {
   return (
